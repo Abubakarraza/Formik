@@ -11,7 +11,7 @@ const Form = () => {
       console.log('Form Values', values);
     },
   });
-  //   console.log('value', values);
+  console.log('value', values);
   return (
     <form action="" onSubmit={handleSubmit}>
       <div className="container">
