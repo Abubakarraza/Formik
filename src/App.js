@@ -1,8 +1,8 @@
 import './App.css';
-import Form from './components/formikForm/Form';
+import Forms from './components/formikForm/Forms';
 
 function App() {
-  return <Form />;
+  return <Forms />;
 }
 
 export default App;
