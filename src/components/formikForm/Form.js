@@ -1,6 +1,7 @@
 import { useFormik } from 'formik';
 import React from 'react';
 import * as yup from 'yup';
+import '.././index.css';
 const Form = () => {
   // initial Values for Formik Form
   const initialValues = {
