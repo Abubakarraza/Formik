@@ -1,0 +1,45 @@
+.container {
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: auto;
+}
+button {
+  width: 100px;
+  height: 40px;
+  background: #6161b9;
+  border: 2px solid #fff;
+  color: #fff;
+  cursor: pointer;
+  border-radius: 10px;
+  margin: 20px 0px;
+}
+button:disabled {
+  background-color: gray;
+}
+label {
+  margin: 10px 0px;
+  font-size: 25px;
+  color: rgb(97, 97, 185);
+  font-weight: 700;
+}
+#input {
+  height: 30px;
+  width: 50vw;
+  border: 2px solid rgb(97, 97, 185);
+}
+#textarea {
+  height: 50px;
+  width: 50%;
+  border: 2px solid rgb(97, 97, 185);
+}
+#address {
+  height: 30px;
+  width: 50vw;
+  border: 2px solid rgb(97, 97, 185);
+}
+.error {
+  color: red;
+}

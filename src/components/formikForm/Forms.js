@@ -9,6 +9,7 @@ import {
 import React, { useState } from 'react';
 import * as yup from 'yup';
 import ErrorText from '../errorMessage/ErrorText';
+import '.././index.css';
 const Forms = () => {
   // initial Values for Formik Form
   const initialValues = {

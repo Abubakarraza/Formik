@@ -1,4 +1,5 @@
 import { useFormik } from 'formik';
+import '.././index.css';
 import React from 'react';
 import * as yup from 'yup';
 const SimpleForm = () => {
@@ -47,7 +48,7 @@ const SimpleForm = () => {
   return (
     <form action="" onSubmit={handleSubmit}>
       <div className="container">
-        <h1>Formik Form </h1>
+        <h1>Formik Form Using UseFormik Hook </h1>
         <label htmlFor="name">Name</label>
         <input
           type="text"
