@@ -1,5 +1,6 @@
 import React from 'react';
 import Input from '../fields/input/Input';
+import RadionButton from '../fields/radionButton/RadionButton';
 import Select from '../fields/select/Select';
 import TextArea from '../fields/textarea/TextArea';
 
@@ -12,9 +13,10 @@ const FormControl = (props) => {
       return <TextArea {...rest} />;
     case 'select':
       return <Select {...rest} />;
+    case 'radio':
+      return <RadionButton {...rest} />;
     case 'date':
     case 'switch':
-    case 'radio':
       break;
 
     default:
