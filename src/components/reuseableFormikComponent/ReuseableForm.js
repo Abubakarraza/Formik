@@ -8,6 +8,7 @@ const ReuseableForm = () => {
     email: '',
     textarea: '',
     selectOption: '',
+    selectRadio: '',
   };
   const options = [
     { key: 'option1', value: 'option1' },
@@ -18,6 +19,7 @@ const ReuseableForm = () => {
     email: yup.string().required('!Required'),
     textarea: yup.string().required('!Required'),
     selectOption: yup.string().required('!Required'),
+    // selectRadio: yup.string().required('!Required'),
   });
   const onSubmit = (values) => {
     console.log('Values', values);
@@ -58,6 +60,14 @@ const ReuseableForm = () => {
                 // type="select"
                 label="Select Option"
                 name="selectOption"
+                options={options}
+                // placeholder=""
+              />
+              <FormControl
+                control={'radio'}
+                // type="select"
+                label="Radio Option"
+                name="selectRadio"
                 options={options}
                 // placeholder=""
               />
