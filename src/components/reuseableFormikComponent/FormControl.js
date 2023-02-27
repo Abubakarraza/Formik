@@ -3,6 +3,8 @@ import Input from '../fields/input/Input';
 import RadionButton from '../fields/radionButton/RadionButton';
 import Select from '../fields/select/Select';
 import TextArea from '../fields/textarea/TextArea';
+import CheckBoxGroup from '../fields/checkbox/Checkbox';
+import DatePicker from '../fields/datePicker/DatePicker';
 
 const FormControl = (props) => {
   const { control, ...rest } = props;
@@ -15,7 +17,10 @@ const FormControl = (props) => {
       return <Select {...rest} />;
     case 'radio':
       return <RadionButton {...rest} />;
+    case 'checkbox':
+      return <CheckBoxGroup {...rest} />;
     case 'date':
+      return <DatePicker {...rest} />;
     case 'switch':
       break;
 
