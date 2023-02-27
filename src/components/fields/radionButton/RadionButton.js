@@ -4,7 +4,7 @@ import ErrorText from '../../errorMessage/ErrorText';
 
 const RadionButton = (props) => {
   const { label, name, options, ...rest } = props;
-  console.log('Name', name);
+  // console.log('Name', name);
   return (
     <div
       style={{
@@ -15,13 +15,13 @@ const RadionButton = (props) => {
       }}
     >
       <label>{label}</label>
-      <Field name={name} {...rest}>
+      <Field name={name}>
         {({ field, form }) => {
-          console.log('field', field);
+          // console.log('field', field);
           return (
             <div style={{ display: 'flex' }}>
               {options.map((option, index) => {
-                console.log('options', options);
+                // console.log('options', options);
                 return (
                   <div key={option.value}>
                     <input
@@ -29,8 +29,8 @@ const RadionButton = (props) => {
                       id={option.key}
                       value={option.value}
                       checked={field.value === option.value}
-                      {...field}
-                      name={option.value}
+                      {...rest}
+                      name={`${name}[${index}]`}
                       onChange={() => form.setFieldValue(name, option.value)}
                     />
                     <label htmlFor={option.key}>{option.key}</label>

@@ -9,6 +9,8 @@ const ReuseableForm = () => {
     textarea: '',
     selectOption: '',
     selectRadio: '',
+    checkBoxGroup: [],
+    date: new Date(),
   };
   const options = [
     { key: 'option1', value: 'option1' },
@@ -19,7 +21,8 @@ const ReuseableForm = () => {
     email: yup.string().required('!Required'),
     textarea: yup.string().required('!Required'),
     selectOption: yup.string().required('!Required'),
-    // selectRadio: yup.string().required('!Required'),
+    selectRadio: yup.string().required('!Required'),
+    checkBoxGroup: yup.array().required('Required'),
   });
   const onSubmit = (values) => {
     console.log('Values', values);
@@ -69,6 +72,21 @@ const ReuseableForm = () => {
                 label="Radio Option"
                 name="selectRadio"
                 options={options}
+                // placeholder=""
+              />
+              <FormControl
+                control={'checkbox'}
+                // type="select"
+                label="CheckBox Group"
+                name="checkBoxGroup"
+                options={options}
+                // placeholder=""
+              />
+              <FormControl
+                control={'date'}
+                // type="select"
+                label="Date Picker"
+                name="date"
                 // placeholder=""
               />
               <button
